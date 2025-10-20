@@ -6,9 +6,9 @@ import pickle
 # Load the trained model and scaler
 @st.cache_data
 def load_model():
-    with open('rf_classifier.pkl', 'rb') as model_file:
+    with open('models/rf_classifier.pkl', 'rb') as model_file:
         model = pickle.load(model_file)
-    with open('scaler.pkl', 'rb') as scaler_file:
+    with open('models/scaler.pkl', 'rb') as scaler_file:
         scaler = pickle.load(scaler_file)
     return model, scaler
 
